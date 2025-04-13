@@ -70,5 +70,5 @@ jobs:
             cd ${{ env.APP_PATH }}
             docker compose down
             docker image prune -f
-            docker compose build
-            docker compose up -d
+            docker-compose build
+            docker-compose up -d
