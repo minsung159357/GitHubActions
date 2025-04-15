@@ -60,7 +60,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
-          source: "*.jar,Dockerfile,docker-compose.yml"
+          source: "build/libs/*.jar,Dockerfile,docker-compose.yml"
           target: ${{ env.APP_PATH }}
 
       - name: SSH and Deploy on EC2
@@ -71,7 +71,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd ${{ env.APP_PATH }}
-            docker compose down
+            docker-compose down
             docker image prune -f
-            docker-compose build
+            docker-compose build --no-cache
             docker-compose up -d
