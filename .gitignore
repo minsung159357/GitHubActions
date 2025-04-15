@@ -37,4 +37,8 @@ out/
 .vscode/
 
 ### CI-CD Secrets ###
+<<<<<<< HEAD
 # application.yml
+=======
+application.yml
+>>>>>>> 23b0ee7aae1b44e638930311b831bab972f9c7f1
