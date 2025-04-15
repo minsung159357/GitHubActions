@@ -60,7 +60,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
-          source: "build/libs/*.jar,Dockerfile,docker-compose.yml"
+          source: "*.jar,Dockerfile,docker-compose.yml"
           target: ${{ env.APP_PATH }}
 
       - name: SSH and Deploy on EC2
