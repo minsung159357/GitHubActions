@@ -2,8 +2,8 @@
     
     <aside>
     
-    `데이터베이스  이름:` cicd_test_db 
-    `마스터 사용자 이름:` 아이디
+    `데이터베이스  이름:` cicd_test_db <br> 
+    `마스터 사용자 이름:` 아이디 <br>
     `마스터 사용자 암호:` 비밀번호
     
     </aside>
@@ -124,8 +124,6 @@ git push -u origin main
 # GitHub Actions 탭 들어가서 workflow 동작 확인 (build -> deploy)
 ```
 
-### 5️⃣ 결과 이미지 및 시연 영상 링크
-
-![image.png](attachment:38e477dd-7d3d-4ee9-b0c0-e28565e51648:image.png)
+### 5️⃣ 결과(링크 24 페이지)
 
 https://www.canva.com/design/DAGkkXl20Z8/-hMIfDPEanakH_-Q1yEZSQ/view?utm_content=DA[…]hare&utm_medium=link2&utm_source=uniquelinks&utlId=h56255d4ad4
