@@ -24,7 +24,7 @@
     - build/libs에 jar 생성 확인
     - `application.yml`에서 DB 연결 확인
 7. Workflow 트리거 테스트
-    - develop 브랜치로 push 시 workflow 작동
+    - main 브랜치로 push 시 workflow 작동
     - 자동 배포 정상 완료 확인
 8. 최종 구현 완료
     - GitHub Actions ↔ AWS EC2 연동 완료
@@ -34,7 +34,7 @@
 
 ### 요약
 
-1. `develop` 브랜치에 코드가 push되면 → GitHub Actions 워크플로우가 자동 실행됨
+1. `main` 브랜치에 코드가 push되면 → GitHub Actions 워크플로우가 자동 실행됨
 2. GitHub Actions가 코드 빌드 & JAR 생성 → EC2 서버에 파일 전송
 3. EC2 서버에서 Docker Compose로 앱 재배포
 
@@ -47,7 +47,7 @@
 
 ### 1️⃣ **트리거 조건**
 
-- `develop` 브랜치에 push 되면 자동 실행됨
+- `main` 브랜치에 push 되면 자동 실행됨
 - `workflow_dispatch:`로 수동 실행 가능
 
 ### 2️⃣ **Build 단계 (GitHub Actions 내부에서 실행)**
@@ -104,8 +104,8 @@
 # 3. Git 초기화
 git init
 
-# 4. develop 브랜치 생성 및 이동 (workflow 실행이 develop 브랜치 기준)
-git checkout -b develop
+# 4. main 브랜치 생성 및 이동 (workflow 실행이 main 브랜치 기준)
+git checkout -b main
 
 # 5. GitHub에 새 레포지토리 만든 후 원격 저장소 등록
 git remote add origin https://github.com/사용자이름/레포이름.git
@@ -116,10 +116,10 @@ git remote add origin https://github.com/사용자이름/레포이름.git
 ```powershell
 # 6. 파일 스테이징 및 커밋
 git add .
-git commit -m "Initial commit on develop"
+git commit -m "Initial commit on main"
 
-# 7. develop 브랜치로 푸시
-git push -u origin develop
+# 7. main 브랜치로 푸시
+git push -u origin main
 
 # GitHub Actions 탭 들어가서 workflow 동작 확인 (build -> deploy)
 ```
