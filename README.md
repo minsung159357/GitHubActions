@@ -124,6 +124,6 @@ git push -u origin main
 # GitHub Actions 탭 들어가서 workflow 동작 확인 (build -> deploy)
 ```
 
-### 5️⃣ 결과(링크 24 페이지)
+### 5️⃣ 결과 ( 장표기준 17 )
 
 https://www.canva.com/design/DAGkkXl20Z8/-hMIfDPEanakH_-Q1yEZSQ/view?utm_content=DA[…]hare&utm_medium=link2&utm_source=uniquelinks&utlId=h56255d4ad4
